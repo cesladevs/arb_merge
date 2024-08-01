@@ -1,0 +1,29 @@
+name: arb_merger
+description: The package that merge some ARB files every locale into single ARB file.
+version: 0.1.0
+homepage:
+
+environment:
+  sdk: ">=3.0.2 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  args: ^2.4.2
+  yaml: ^3.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+arb_merge:
+  input_file_path: "assets/l10n"
+  output_file_path: "lib/l10n"
+  supported_locales: ["pt"]
+  output_file_name: "app"
+
+flutter:
+  generate: true
